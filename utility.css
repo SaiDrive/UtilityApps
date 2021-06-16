@@ -1,9 +1,52 @@
+:root {
+    --background-color: #f5efef; 
+    --dark: #1b1b1b;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: var(--background-color);
   }
 
-  a{
+a{
     text-decoration: none;}
+body{
+    background: var(--background-color)
+}
+nav{
+    background: var(--dark);
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: black;
+}
+nav ul li a{
+    color: white;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul ul{
+    position: absolute;
+    top: 50px;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+}
