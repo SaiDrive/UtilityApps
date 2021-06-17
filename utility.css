@@ -37,16 +37,19 @@ nav ul li{
 }
 nav ul li a{
     color: white;
-    line-height: 70px;
-    font-size: 18px;
-    padding: 8px 15px;
+    line-height: 50px;
+    font-size: 15px;
+    padding: 8px 10px;
 }
 nav ul ul{
     position: absolute;
-    top: 50px;
+    top: 65px;
 }
 nav ul ul li{
     position: relative;
     margin: 0px;
     width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid var(--background-color);
 }
