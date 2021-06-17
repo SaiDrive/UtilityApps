@@ -15,12 +15,12 @@
         <ul> <li> <a href="#"> Encoder/Decoders <i class="arrow down"></i></a>
 
         <ul>
-            <li><a href="#">URL </a></li>
-            <li><a href="#">Base64 </a></li>
-            <li><a href="#">MD5 Hashing</a></li>
-            <li><a href="#">SHA-1 Hashing </a></li>
-            <li><a href="#">SHA-256 Hashing </a></li>
-            <li><a href="#">SHA-512 Hashing </a></li>
+            <li><a href="#" onclick="display('url')">URL </a></li>
+            <li><a href="#" onclick="display('base64')">Base64 </a></li>
+            <li><a href="#" onclick="display('md5')">MD5 Hashing</a></li>
+            <li><a href="#" onclick="display('sha1')">SHA-1 Hashing </a></li>
+            <li><a href="#" onclick="display('sha256')">SHA-256 Hashing </a></li>
+            <li><a href="#" onclick="display('sha512')">SHA-512 Hashing </a></li>
             </ul>
         </li>
         </ul>
@@ -30,5 +30,17 @@
         <ul> <li><a href="#"> Number Base Converters</a></li></ul>
         <ul> <li><a href="#"> Text Tools/String Utilities</a></li></ul>
     </nav>
+<div class="menu">
+<div class="submenu" id="url"><h1>Url encoder/Decoder</h1>
+<p>This tool encode or decode a string of text. For worldwide interoperability, URIs have to be encoded uniformly. To map the wide range of characters used worldwide into the 60 or so allowed characters in a URI, a two-step process is used:</p>
+</div>
+<div class="submenu" id="base64"><h1>Base64</h1> <p>This tool encodes/decodes base64 string. The term Base 64 is generic, and there are many implementations. MIME, which stands for Multi-Purpose Internet Mail Extensions, is the most common that is seen today. It is used to transmit attachments via email over the Simple Mail Transfer Protocol (SMTP).
+
+    You should use Base64 whenever you intend to transmit binary data in a textual format</p></div>
+<div class="submenu" id="md5"><h1>Md5 Hashing</h1> <p></p></div>
+<div class="submenu" id="sha1"><h1>SHA-1 Hashing</h1> <p></p></div>
+<div class="submenu" id="sha256"><h1>SHA-256 Hashing</h1> <p></p></div>
+<div class="submenu" id="sha512"><h1>SHA-512 Hashing</h1> <p></p></div>
+</div>
 </body>
 </html>

@@ -9,7 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: var(--background-color);
+    
   }
 
 a{
@@ -107,5 +107,8 @@ ul li ul {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
+.submenu{
+    display: none;
+}
   
   
