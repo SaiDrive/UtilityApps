@@ -1,6 +1,7 @@
 :root {
     --background-color: #f5efef; 
     --dark: #1b1b1b;
+    
 }
 
 *{
@@ -25,31 +26,86 @@ nav:after{
     display: table;
 }
 nav ul{
-    float: right;
+    float: left;
     list-style: none;
-    margin-right: 40px;
     position: relative;
+    padding: 5px;
 }
 nav ul li{
+    margin-left: 2rem;
     float: left;
     display: inline-block;
-    background: black;
+    background: rgb(27 27 27);
 }
 nav ul li a{
     color: white;
     line-height: 50px;
-    font-size: 15px;
-    padding: 8px 10px;
+    font-size: 16px;
+    padding: auto;
 }
-nav ul ul{
+nav ul li ul{
     position: absolute;
-    top: 65px;
+    top: 3.5rem;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
 }
-nav ul ul li{
+nav ul li a:hover > ul li ul li{
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li ul li{
     position: relative;
-    margin: 0px;
+    margin-left: 2rem;
     width: 150px;
     float: none;
     display: list-item;
     border-bottom: 1px solid var(--background-color);
 }
+.logo h1{
+    text-align: center;
+    padding: 10px;
+    color:var(--dark);
+    background-color: rgb(160, 156, 156);
+    }
+nav ul li a:hover{
+border-radius: 3px;
+box-shadow:  0 0 10px  #33ffff,
+            0 0 10px #66ffff;
+
+}
+nav ul li a{
+    padding: 2px;
+    margin: 2px;
+}
+
+   
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  .arrow {
+    border: solid rgb(250, 249, 249);
+    margin-left: 2px;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  
