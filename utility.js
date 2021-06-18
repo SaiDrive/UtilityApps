@@ -7,3 +7,11 @@ document.querySelector('#sha256').style.display = 'none';
 document.querySelector('#sha512').style.display = 'none';
 document.querySelector('#'+ input).style.display = 'block';
 }
+function encode(input){
+    let text = document.querySelector('#'+input).value;
+document.querySelector("#OutputUrl").value = encodeURIComponent(text);
+}
+function decode(input){
+    let text = document.querySelector('#'+input).value;
+    document.querySelector("#OutputUrl").value = decodeURIComponent(text);
+}
