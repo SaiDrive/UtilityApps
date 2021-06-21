@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/utility.css">
     <script src="/utility.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,11 +18,8 @@
         <ul>
             <li><a href="#" onclick="display('url')">URL </a></li>
             <li><a href="#" onclick="display('base64')">Base64 </a></li>
-            <li><a href="#" onclick="display('md5')">MD5 Hashing</a></li>
-            <li><a href="#" onclick="display('sha1')">SHA-1 Hashing </a></li>
-            <li><a href="#" onclick="display('sha256')">SHA-256 Hashing </a></li>
-            <li><a href="#" onclick="display('sha512')">SHA-512 Hashing </a></li>
-            </ul>
+            <li><a href="#" onclick="display('Hashing')">Hash Generator</a></li>
+        </ul>
         </li>
         </ul>
         <ul> <li><a href="#"> RGB/HEX Converter <i class="arrow down"></i></a></li></ul>
@@ -34,14 +32,36 @@
 <div class="submenu" id="url"><h1>Url encoder/Decoder</h1>
 <p>This tool encode or decode a string of text. For worldwide interoperability, URIs have to be encoded uniformly. To map the wide range of characters used worldwide into the 60 or so allowed characters in a URI, a two-step process is used:</p>
 <label for="name">Enter Url to Encode or Decode: </label>
-<textarea id="InputUrl" cols="40" rows="2" placeholder="Enter your URL here"></textarea>
+<textarea id="InputUrl" cols="40" rows="4" placeholder="Enter your URL here"></textarea>
 <button onclick="encode('InputUrl')">Encode</button>
 <button onclick="decode('InputUrl')">Decode</button>
-<textarea  id="OutputUrl" cols="40" rows="2" placeholder="Your results here." readonly="readonly"></textarea> ></textarea>
+<textarea  id="OutputUrl" cols="40" rows="4" placeholder="Your results here." readonly="readonly"></textarea> ></textarea>
 </div>
 <div class="submenu" id="base64"><h1>Base64</h1> <p>This tool encodes/decodes base64 string. The term Base 64 is generic, and there are many implementations. MIME, which stands for Multi-Purpose Internet Mail Extensions, is the most common that is seen today. It is used to transmit attachments via email over the Simple Mail Transfer Protocol (SMTP).
-    You should use Base64 whenever you intend to transmit binary data in a textual format</p></div>
-<div class="submenu" id="md5"><h1>Md5 Hashing</h1> <p></p></div>
+    You should use Base64 whenever you intend to transmit binary data in a textual format</p>
+    <label for="name">Encode a string as base64: </label>
+    <textarea id="InputString" cols="40" rows="4" placeholder="Enter your URL here"></textarea>
+    <button onclick="base64Encode('InputString')">Encode</button>
+    <button onclick="base64Decode('InputString')">Decode</button>
+    <textarea  id="OutputString" cols="40" rows="4" placeholder="Your results here." readonly="readonly"></textarea> ></textarea>
+</div>
+<div class="submenu" id="Hashing"><h1>Hash Generator</h1><p>
+    This tool is one stop shop for various hash generations. It supports below hash generations utilities: </p>
+    MD5 Hash Generator : An MD5 hash is created by taking a string of an any length and encoding it into a 128-bit fingerprint.
+    SHA-1 Hash Generator : SHA-1 (Secure Hash Algorithm) is a 160 bit cryptographic hash function created by the NSA in 1995
+    SHA-256 Hash Generator : SHA256 is designed by NSA, it's more reliable than SHA1.
+    SHA-512 Hash Generator : The SHA512 hash can not be decrypted if the text you entered is complicated enough.</p>
+  <label for="name">Enter your string for hashing: </label>
+  <textarea id="string-hashing-input" cols="40" rows="4" placeholder="Enter your URL here"></textarea>
+  <select name="" id="hashSelect" onchange="hashing()">
+      <option  value="">--Select--</option>
+      <option value="md5">MD5 Hashing</option>
+      <option value="sha1">SHA-1 Hashing</option>
+      <option value="sha256">SHA-256 Hashing</option>
+      <option value="sha512">SHA-512 Hashing</option>
+  </select>
+  <textarea  id="string-hashing-output" cols="40" rows="4" placeholder="Your results here." readonly="readonly"></textarea> ></textarea>
+</div>
 <div class="submenu" id="sha1"><h1>SHA-1 Hashing</h1> <p></p></div>
 <div class="submenu" id="sha256"><h1>SHA-256 Hashing</h1> <p></p></div>
 <div class="submenu" id="sha512"><h1>SHA-512 Hashing</h1> <p></p></div>
