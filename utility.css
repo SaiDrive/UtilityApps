@@ -63,6 +63,9 @@ nav ul li ul li{
     display: list-item;
     border-bottom: 1px solid var(--background-color);
 }
+
+
+
 .logo h1{
     text-align: center;
     padding: 10px;
@@ -87,7 +90,7 @@ ul li ul {
     position: absolute;
     transition: all 0.5s ease;
     left: 0;
-    display: none;
+    display: block;
   }
   
   ul li:hover > ul,

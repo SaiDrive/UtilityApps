@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utility Home</title>
+    <link rel="shortcut icon" type="image/jpg/png" href="/fevicon.png"/>
     <link rel="stylesheet" href="/utility.css">
     <script src="/utility.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,16 +14,25 @@
 <body>
     <div class="logo"><h1>Utility Website</h1></div>
     <nav>
-        <ul> <li> <a href="#"> Encoder/Decoders <i class="arrow down"></i></a>
-
-        <ul>
-            <li><a href="#" onclick="display('url')">URL </a></li>
-            <li><a href="#" onclick="display('base64')">Base64 </a></li>
-            <li><a href="#" onclick="display('Hashing')">Hash Generator</a></li>
+        <ul> 
+            <li> 
+                <a href="#"> Encoder/Decoders <i class="arrow down"></i></a>
+            <ul>
+                <li><a href="#" onclick="display('url')">URL </a></li>
+                <li><a href="#" onclick="display('base64')">Base64 </a></li>
+                <li><a href="#" onclick="display('Hashing')">Hash Generator</a></li>
+            </ul>
+            </li>
         </ul>
-        </li>
+        <ul> 
+            <li>
+                <a href="#"> RGB/HEX Converter <i class="arrow down"></i></a>
+            <ul>
+                <li><a href="#" onclick="display('Rgb-Hex')">RGB -> HEX</a></li>
+                <li><a href="#" onclick="display('Hex-Rgb')">HEX -> RGB</a></li>
+            </ul>
+            </li>
         </ul>
-        <ul> <li><a href="#"> RGB/HEX Converter <i class="arrow down"></i></a></li></ul>
         <ul> <li><a href="#"> Timestamp Converter <i class="arrow down"></i></a></li></ul>
         <ul> <li><a href="#"> Unit Converters <i class="arrow down"></i></a></li></ul>
         <ul> <li><a href="#"> Number Base Converters <i class="arrow down"></i></a></li></ul>
@@ -47,10 +57,12 @@
 </div>
 <div class="submenu" id="Hashing"><h1>Hash Generator</h1><p>
     This tool is one stop shop for various hash generations. It supports below hash generations utilities: </p>
-    MD5 Hash Generator : An MD5 hash is created by taking a string of an any length and encoding it into a 128-bit fingerprint.
-    SHA-1 Hash Generator : SHA-1 (Secure Hash Algorithm) is a 160 bit cryptographic hash function created by the NSA in 1995
-    SHA-256 Hash Generator : SHA256 is designed by NSA, it's more reliable than SHA1.
-    SHA-512 Hash Generator : The SHA512 hash can not be decrypted if the text you entered is complicated enough.</p>
+<ol>
+    <li>MD5 Hash Generator : An MD5 hash is created by taking a string of an any length and encoding it into a 128-bit fingerprint.</li>
+    <li>SHA-1 Hash Generator : SHA-1 (Secure Hash Algorithm) is a 160 bit cryptographic hash function created by the NSA in 1995</li>
+    <li>SHA-256 Hash Generator : SHA256 is designed by NSA, it's more reliable than SHA1.</li>
+    <li>SHA-512 Hash Generator : The SHA512 hash can not be decrypted if the text you entered is complicated enough.</li>
+</ol>
   <label for="name">Enter your string for hashing: </label>
   <textarea id="string-hashing-input" cols="40" rows="4" placeholder="Enter your URL here"></textarea>
   <select name="" id="hashSelect" onchange="hashing()">
@@ -62,11 +74,22 @@
   </select>
   <textarea  id="string-hashing-output" cols="40" rows="4" placeholder="Your results here." readonly="readonly"></textarea> ></textarea>
 </div>
-<div class="submenu" id="sha1"><h1>SHA-1 Hashing</h1> <p></p></div>
-<div class="submenu" id="sha256"><h1>SHA-256 Hashing</h1> <p></p></div>
-<div class="submenu" id="sha512"><h1>SHA-512 Hashing</h1> <p></p></div>
 </div>
 <div>
+<div>
+</div>
+</div>
+<div class="menu">
+    <div class="submenu" id="Rgb-Hex">
+    <h1>RGB to Hex converter</h1>
+    <p>It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those values to a hexadecimal string that can be used to specify color in html/css code.
+        Photo editing software usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing software as the background of your html element then you will have to get the hexadecimal representation of the RGB values. This tool allows you to get those values.</p>
+    </div>
+    <div class="submenu" id="Hex-Rgb">
+    <h1>Hex to RGB converter</h1>
+    <p>It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those values to a hexadecimal string that can be used to specify color in html/css code. </p>
+    <p>Photo editing software usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing software as the background of your html element then you will have to get the hexadecimal representation of the RGB values. This tool allows you to get those values.</p>
+    </div>
 
 </div>
 </body>

@@ -2,6 +2,8 @@ function display(input){
 document.querySelector('#url').style.display = 'none';
 document.querySelector('#base64').style.display = 'none';
 document.querySelector('#Hashing').style.display = 'none';
+document.querySelector('#Rgb-Hex').style.display = 'none';
+document.querySelector('#Hex-Rgb').style.display = 'none';
 document.querySelector('#'+ input).style.display = 'block';
 }
 function encode(input){
