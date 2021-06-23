@@ -40,3 +40,15 @@ switch(option){
     break;
         }
     }
+
+function rgbToHex(){
+    let red = document.querySelector('#redvalue').value;
+    let green = document.querySelector('#greenvalue').value;
+    let blue = document.querySelector('#bluevalue').value;
+    red = Number(red).toString(16);
+    green = Number(green).toString(16);
+    blue = Number(blue).toString(16);
+    document.querySelector('#Hex-output').value = `#${red}${green}${blue}`;
+    
+}
+
