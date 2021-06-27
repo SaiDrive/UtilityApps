@@ -45,10 +45,41 @@ function rgbToHex(){
     let red = document.querySelector('#redvalue').value;
     let green = document.querySelector('#greenvalue').value;
     let blue = document.querySelector('#bluevalue').value;
+    let colorPreview = document.querySelector("#color-ouput").value;
+  
     red = Number(red).toString(16);
     green = Number(green).toString(16);
     blue = Number(blue).toString(16);
-    document.querySelector('#Hex-output').value = `#${red}${green}${blue}`;
-    
+    if(red === 0 || red < 10) {
+        red = red +'0';
+    } if(green === 0 || green < 10){
+        green = green +'0';
+    }
+    if(blue === 0 || blue < 10){
+        blue = blue +'0';
+    }
+    hexvalue = `#${red}${green}${blue}`;
+    document.querySelector('#Hex-output').value = hexvalue;
+    document.querySelector("#color-ouput").style.backgroundColor = hexvalue;
 }
 
+function hexToRGB(){
+let hexValue = document.querySelector('#Hex-value').value;
+hexValue = hexValue.split("#").pop();
+if (hexValue.length != 6){
+alert("Only six-digit hex colors are allowed.");
+    }
+else {
+    let redValue = `${hexValue[0]}${hexValue[1]}`;
+    let redHex = parseInt(redValue,16);
+    let blueValue = `${hexValue[2]}${hexValue[3]}`;
+    let blueHex = parseInt(blueValue,16);
+    let greenValue = `${hexValue[4]}${hexValue[5]}`;
+    let greenHex = parseInt(greenValue,16);
+    let previewColor = document.querySelector("#Hex-color-ouput").value;
+    document.querySelector('#hex-to-red').value = redHex;
+    document.querySelector('#hex-to-green').value = blueHex;
+    document.querySelector('#hex-to-blue').value = greenHex;
+    document.querySelector('#Hex-color-ouput').style.backgroundColor = `#${hexValue}`;
+    }
+}

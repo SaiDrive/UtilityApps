@@ -114,4 +114,6 @@ ul li ul {
     display: none;
 }
   
-  
+textarea {
+    resize: none;
+  }

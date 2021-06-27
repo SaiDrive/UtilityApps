@@ -92,12 +92,22 @@
     <input id="bluevalue" type="number" maxlength="3" placeholder="255" value="">
     <input type="submit" onclick="rgbToHex()" value="Convert to Hex →" >
     <textarea name="" id="Hex-output" cols="20" rows="1" placeholder="Result here" readonly = "readonly"></textarea>
-    
+    <textarea  id="color-ouput" cols="10" rows="2" readonly = "readonly"></textarea>
     </div>
     <div class="submenu" id="Hex-Rgb">
     <h1>Hex to RGB converter</h1>
     <p>It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those values to a hexadecimal string that can be used to specify color in html/css code. </p>
     <p>Photo editing software usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing software as the background of your html element then you will have to get the hexadecimal representation of the RGB values. This tool allows you to get those values.</p>
+    <label for="">Hex Input:</label>
+    <input id="Hex-value" type="text" maxlength="7" minlength="7" placeholder="Enter the Hex Value" value="">
+    <input type="submit" onclick="hexToRGB()" value="Covert to RGB→">
+    <label for="">Red</label>
+    <input id="hex-to-red"  type="number" maxlength="3" placeholder="255" value="">
+    <label for="">Green</label>
+    <input id="hex-to-green"  type="number" maxlength="3" placeholder="255" value="">
+    <label for="">Blue</label>
+    <input id="hex-to-blue"  type="number" maxlength="3" placeholder="255" value="">
+    <textarea  id="Hex-color-ouput" cols="10" rows="2" readonly = "readonly"></textarea>
     </div>
 
 </div>
