@@ -4,6 +4,13 @@ document.querySelector('#base64').style.display = 'none';
 document.querySelector('#Hashing').style.display = 'none';
 document.querySelector('#Rgb-Hex').style.display = 'none';
 document.querySelector('#Hex-Rgb').style.display = 'none';
+document.querySelector('#to-Epoch-converter').style.display = 'none';
+document.querySelector('#to-human-readable-coverter').style.display = 'none';
+document.querySelector('#temp-converter').style.display = 'none';
+document.querySelector('#lang-translator').style.display = 'none';
+document.querySelector('#number-base-converter').style.display = 'none';
+document.querySelector('#string-utilities').style.display = 'none';
+
 document.querySelector('#'+ input).style.display = 'block';
 }
 function encode(input){

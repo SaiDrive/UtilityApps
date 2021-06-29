@@ -35,21 +35,21 @@
         </ul>
         <ul> <li><a href="#"> Timestamp Converter <i class="arrow down"></i></a>
             <ul>
-                <li><a href="#">Human Readable to Epoch</a></li>
-                <li><a href="#">Epoch to Human Readable</a></li>
+                <li><a href="#" onclick="display('to-Epoch-converter')" >Human Readable to Epoch</a></li>
+                <li><a href="#" onclick="display('to-human-readable-coverter')">Epoch to Human Readable</a></li>
             </ul>
         </li></ul>
         <ul> <li><a href="#"> Other Utilities <i class="arrow down"></i></a>
             <ul>
-                <li><a href="#">Temperature Converter</a></li>
-                <li><a href="#">Language Translator</a></li>
+                <li><a href="#" onclick="display('temp-converter')">Temperature Converter</a></li>
+                <li><a href="#" onclick="display('lang-translator')">Language Translator</a></li>
             </ul>
         </li> 
         </ul>
-        <ul> <li><a href="#"> Number Base Converters <i class="arrow down"></i></a></li></ul>
-        <ul> <li><a href="#"> Text Tools/String Utilities <i class="arrow down"></i></a></li></ul>
+        <ul> <li><a href="#" onclick="display('number-base-converter')" > Number Base Converters <i class="arrow down"></i></a></li></ul>
+        <ul> <li><a href="#" onclick="display('string-utilities')"> Text Tools/String Utilities <i class="arrow down"></i></a></li></ul>
     </nav>
-<div class="menu">
+
 <div class="submenu" id="url"><h1>Url encoder/Decoder</h1>
 <p>This tool encode or decode a string of text. For worldwide interoperability, URIs have to be encoded uniformly. To map the wide range of characters used worldwide into the 60 or so allowed characters in a URI, a two-step process is used:</p>
 <label for="name">Enter Url to Encode or Decode: </label>
@@ -119,6 +119,39 @@
     <label for="">Blue</label>
     <input id="hex-to-blue"  type="number" maxlength="3" placeholder="255" value="">
     <textarea  id="Hex-color-ouput" cols="10" rows="2" readonly = "readonly"></textarea>
+    </div>
+    <div class="submenu" id="to-Epoch-converter">
+        <h1>Human readable to Epoch</h1>
+        <label for="">Year:</label>
+        <input type="number" name="" id="year" placeholder="2021">
+        <label for="">Month:</label>
+        <input type="number" name="" id="month" placeholder="1-12">
+        <label for="">Day:</label>
+        <input type="number" name="" id="day" placeholder="1-31">
+        <label for="">Hours:</label>
+        <input type="number" name="" id="hours" placeholder="1-24">
+        <label for="">Minutes:</label>
+        <input type="number" name="" id="minutes" placeholder="1-59">
+        <label for="">Seconds:</label>
+        <input type="number" name="" id="seconds" placeholder="1-59">
+        <input type="submit">
+        <textarea name="" id="epoch-output" cols="40" rows="2" placeholder="result here.." readonly ='readonly' ></textarea>
+    </div>
+    <div class="submenu" id="to-human-readable-coverter">
+        <h1>Epoch to human date</h1>
+        <input type="number">
+    </div>
+    <div class="submenu" id="temp-converter">
+        <h1>Temperature Converter</h1>
+    </div>
+    <div class="submenu" id="lang-translator">
+        <h1>Language Translator</h1>
+    </div>
+    <div class="submenu" id="number-base-converter">
+        <h1>Number base converter</h1>
+    </div>
+    <div class="submenu" id="string-utilities">
+        <h1>String Utilities </h1>
     </div>
 
 </div>
