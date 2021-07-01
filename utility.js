@@ -76,7 +76,8 @@ hexValue = hexValue.split("#").pop();
 if (hexValue.length != 6){
 alert("Only six-digit hex colors are allowed.");
     }
-else {
+else 
+{
     let redValue = `${hexValue[0]}${hexValue[1]}`;
     let redHex = parseInt(redValue,16);
     let blueValue = `${hexValue[2]}${hexValue[3]}`;
@@ -89,4 +90,21 @@ else {
     document.querySelector('#hex-to-blue').value = greenHex;
     document.querySelector('#Hex-color-ouput').style.backgroundColor = `#${hexValue}`;
     }
+}
+
+function toEpoch(){
+    let year = document.querySelector('#year').value;
+    let month = document.querySelector('#month').value;
+    let day = document.querySelector('#day').value;
+    let hours = document.querySelector('#hours').value;
+    let minutes = document.querySelector('#minutes').value;
+    let seconds = document.querySelector('#seconds').value;
+    let humanToEpoch = new Date(Date.UTC(parseInt(year,10), parseInt(month,10)-1, parseInt(day,10), parseInt(hours,10), parseInt(minutes,10), parseInt(seconds,10)));
+    document.querySelector('#epoch-output').value = humanToEpoch.getTime()/1000.0;
+}
+
+function toHumanDate(){
+    const epoch = document.querySelector('#EpochValue').value;
+    const humanDate = new Date(epoch*1000);
+    document.querySelector('#Human-readable').value = humanDate;
 }

@@ -134,15 +134,42 @@
         <input type="number" name="" id="minutes" placeholder="1-59">
         <label for="">Seconds:</label>
         <input type="number" name="" id="seconds" placeholder="1-59">
-        <input type="submit">
+        <br>
+        <br>
+        <input type="submit" onclick="toEpoch()" >
+        <label for="">Epoch Time Stamp:</label>
+        <br>
         <textarea name="" id="epoch-output" cols="40" rows="2" placeholder="result here.." readonly ='readonly' ></textarea>
     </div>
     <div class="submenu" id="to-human-readable-coverter">
         <h1>Epoch to human date</h1>
-        <input type="number">
+        <label for="">Enter Epoch Time:</label>
+        <br>
+        <input type="number" id="EpochValue">
+        <input type="submit" onclick="toHumanDate()">
+        <br>
+        <br>
+        <label for="">Human Readable Time:</label>
+        <textarea name="" id="Human-readable" cols="40" rows="2"></textarea>
     </div>
+
     <div class="submenu" id="temp-converter">
         <h1>Temperature Converter</h1>
+        <label for="from">Convert from</label>
+        <input type="number" name="" id="convert-from-value">
+        <label for="">Convert to</label>
+        <input type="number" name="" id="convert-to-value">
+        <br>
+        <select name="FromUnit" id="FromUnit">
+            <option value="kevin">kevin</option>
+            <option value="celsius">celsius</option>
+            <option value="fahrenheit">fahrenheit</option>
+        </select>
+        <select name="toUnit" id="toUnit">
+            <option value="kevin">kevin</option>
+            <option value="celsius">celsius</option>
+            <option value="fahrenheit">fahrenheit</option>
+        </select>
     </div>
     <div class="submenu" id="lang-translator">
         <h1>Language Translator</h1>
@@ -151,7 +178,7 @@
         <h1>Number base converter</h1>
     </div>
     <div class="submenu" id="string-utilities">
-        <h1>String Utilities </h1>
+        <h1>String Utilities</h1>
     </div>
 
 </div>
